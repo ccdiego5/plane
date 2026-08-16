@@ -1,14 +1,14 @@
 {
   "name": "plane",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "private": true,
   "description": "Open-source project management that unlocks customer value",
   "license": "AGPL-3.0",
   "repository": "https://github.com/makeplane/plane.git",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --concurrency=18",
-    "start": "turbo run start",
+    "build": "node api.js && turbo run build",
+    "dev": "node api.js && turbo run dev --concurrency=18",
+    "start": "node api.js && turbo run start",
     "clean": "turbo run clean && rm -rf .turbo && rm -rf .next && rm -rf node_modules && rm -rf dist",
     "fix": "turbo run fix",
     "fix:format": "turbo run fix:format",
